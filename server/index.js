@@ -15,9 +15,10 @@ app.use(function(req,res,next){
 */
 console.log(`Running on port ${port}`);
 app.use(morgan('combined'));
-app.use(cors({
-  origin: "apps.ocp4.itmlabs.io"
+/*app.use(cors({
+  origin: "*"
 }));
+*/
 app.get("/api/ping", (req, res) => {
   res.send({
     msg: "Hello, World"
