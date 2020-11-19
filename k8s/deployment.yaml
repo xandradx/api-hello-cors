@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ws1
+  name: ws1
+  namespace: apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ws1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ws1
+    spec:
+      containers:
+      - image: gcr.io/gke-demo-295923/ws1:latest
+        name: ws1
+        resources: {}
+status: {}

@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ws1
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+  namespace: apps
+spec:
+  rules:
+  - host: ws1.34.67.40.53.nip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ws1
+          servicePort: 8080

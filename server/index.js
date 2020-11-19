@@ -18,9 +18,9 @@ app.use(morgan('combined'));
 app.use(cors({
   origin: "*"
 }));
-app.get("/api/ping", (req, res) => {
+app.get("/", (req, res) => {
   res.send({
-    msg: "Hello, World"
+    msg: "Hello, World WS1"
   });
 });
 
