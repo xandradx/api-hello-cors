@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: ws1
-  name: ws1
+    app: node
+  name: node
   namespace: apps
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ws1
+      app: node
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: ws1
+        app: node
     spec:
       containers:
-      - image: gcr.io/gke-demo-295923/ws1:latest
-        name: ws1
+      - image: gcr.io/gke-demo-295923/node:latest
+        name: node
         resources: {}
 status: {}

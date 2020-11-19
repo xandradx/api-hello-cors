@@ -3,8 +3,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: ws1
-  name: ws1
+    app: node
+  name: node
   namespace: apps
 spec:
   ports:
@@ -12,6 +12,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: ws1
+    app: node
 status:
   loadBalancer: {}
